@@ -3,7 +3,7 @@ import os
 import csv
 #-------------------------------------------
 #READ CSV FILE ELECTION_DATA
-csvpath = os.path.join('Election_data.csv')
+csvpath = os.path.join('..', 'Resources','Election_data.csv')
 
 County = " "
 Candidate = " "

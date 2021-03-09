@@ -4,7 +4,7 @@ import csv
 import numpy as np
 #-------------------------------------------
 #READ CSV FILE BUDGET_DATA
-csvpath = os.path.join('budget_data.csv')
+csvpath = os.path.join('..', 'Resources','budget_data.csv')
 
 date = " "
 profits_losses = 0
