@@ -5,12 +5,29 @@ import csv
 #READ CSV FILE ELECTION_DATA
 csvpath = os.path.join('..', 'Resources','Election_data.csv')
 
-County = " "
-Candidate = " "
-total_votes = 0 
-voter_id = 0
-voter_county = " "
-voter_name = " "    
+#create dictionary for candidate name
+candidates = {}
+candidates = dict()
+
+candidates = {"name":"Khan"}
+print(f'{candidates["name"]}')
+
+candidates["name"] = "Correy"
+candidates["name"] = "O'Tooley"
+candidates["name"] = "Li"
+
+print(candidates)
+
+candidates_list = ["Khan", "Correy", "O'Tooley", "Li"]
+
+candidates["name"] = candidates_list
+
+print(f'{candidates["name"][2]}')
+
+#create other variables in dictionary 
+voter_info = {
+    "Voter_ID":[0] 
+    "County":[1]
 
 with open(csvpath) as csvfile:
 
@@ -27,6 +44,10 @@ with open(csvpath) as csvfile:
     for row in csvreader:
         print(row)
         total_votes +=1
+
+
+
+
 
 #Print variable values
 print(f"Election Results")
