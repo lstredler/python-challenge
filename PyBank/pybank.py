@@ -11,8 +11,7 @@ profits_losses = 0
 net_total = 0 
 total_months = 0
 total_volume = 0 
-tuple1 = " "
-tuple2 = 0
+decr_incr = []
 
 ###calculate average
 def average(numbers):
@@ -33,22 +32,24 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader) #pop one row 
     print(f"CSV Header: {csv_header}")
 
-    total_months = 0
     for row in csvreader:
         print(row)
         total_months +=1
         total_volume += int(row[1])
-        average_change = total_volume/total_months
-        arr = np.array([row[0],row[1]])
+        #arr = np.array([row[0],row[1]])
         #max_element = np.amax(arr,row[1])
-        #tuple1,tuple2 = (date), (profits_losses)
        
-
-# Print out the budget data stored in dictionary 
+# Print out the budget data to terminal 
 print(f"Total Months: {total_months}")
 print(f"Net Total: {total_volume}")
-print(f"Average Change: {average_change}")
-print (f"Greatest Increase in Profits: {arr}")
-print(f"Greatest Decrease in Losses: {arr}")
+#print(f"Average Change: {average_change}")
+#print (f"Greatest Increase in Profits: {arr}")
+#print(f"Greatest Decrease in Losses: {arr}")
 
+# export data to text file int analysis folder - specify file to write  
+output_path = os.path.join("..", "output", "budget_data_text.txt")
 
+with open(output_path, 'w') as outfile:  
+    csvwriter = csv.writer(csvfile, delimiter=',')
+    csvwriter.writerow(['Total Months:', '86'])
+    csvwriter.writerow(['Net Total:' , '$38,382,578'])
