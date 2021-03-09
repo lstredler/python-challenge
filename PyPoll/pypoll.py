@@ -1,18 +1,23 @@
 #import modules
 import os
 import csv
-import string
-import random
 #-------------------------------------------
-#READ CSV FILE BUDGET_DATA
+#READ CSV FILE ELECTION_DATA
 csvpath = os.path.join('Election_data.csv')
+
+County = " "
+Candidate = " "
+total_votes = 0 
+voter_id = 0
+voter_county = " "
+voter_name = " "    
 
 with open(csvpath) as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    print(csvreader)
+    head = next(csvreader)
 
     # Read the header row first (skip this step if there is now header)
     csv_header = next(csvreader) #pop one row 
@@ -21,12 +26,11 @@ with open(csvpath) as csvfile:
     # Read each row of data after the header
     for row in csvreader:
         print(row)
+        total_votes +=1
 
-#--------------------------------------------------------------
-#define variables 
-def print_percentages(Election_data):
-    Voter_ID = int(Election_data[0])
-    County = str(Election_data[1])
-    Candidate = str(Election_data[2])
+#Print variable values
+print(f"Election Results")
+print(f"Total Votes: {total_votes}")
+#print voter name, percentsge of votes received, total number of votes
 
-print(Voter_ID)
+#print winner of the election 

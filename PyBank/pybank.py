@@ -35,7 +35,7 @@ with open(csvpath) as csvfile:
 
     total_months = 0
     for row in csvreader:
-        print(row[0])
+        print(row)
         total_months +=1
         total_volume += int(row[1])
         average_change = total_volume/total_months
