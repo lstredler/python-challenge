@@ -11,7 +11,6 @@ profits_losses = 0
 net_total = 0 
 total_months = 0
 total_volume = 0 
-decr_incr = []
 
 ###calculate average
 def average(numbers):
@@ -36,13 +35,15 @@ with open(csvpath) as csvfile:
         print(row)
         total_months +=1
         total_volume += int(row[1])
+        length = len(row[1])
+        average_change = (total_volume/length)
         arr = np.array([row[0],row[1]])
-        #max_element = np.amax(arr,row[1])
+        #max_value = max(arr)
        
 # Print out the budget data to terminal 
 print(f"Total Months: {total_months}")
 print(f"Net Total: {total_volume}")
-print(f"Average Change: {total_volume}")
+print(f"Average Change: {average_change}")
 print (f"Greatest Increase in Profits: {arr}")
 print(f"Greatest Decrease in Losses: {arr}")
 
