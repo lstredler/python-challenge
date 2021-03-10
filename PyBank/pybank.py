@@ -52,11 +52,13 @@ print(f"Greatest Decrease in Losses: {arr}")
 output_file = os.path.join("..", "Resources","budget_analysis.csv")
 
 #open the output file 
-#with open(output_file, "w") as datafile:  
-    #writer.writerow =(["Total Months:", "86"])
-    #writer.writerow =(["Net Total:" , "$38,382,578"])
-    #writer.writerow =(["Average Change:" , "-2315.12"])
-    #writer.writerow =(['Greatest Increase in Profits', 'Feb-2012 ($1926159)'])
-    #writer.writerow =(['Greatest Decrease in Losses:', 'Sep-2013 ($-2196167)']) 
+#with open(output_file, "w") as textfile:  
+    
+    #csvwriter = csv.writer(csvfile, delimiter= ',')
+    #csvwriter.writerow =(["Total Months:", "86"])
+    #csvwriter.writerow =(["Net Total:" , "$38,382,578"])
+    #csvwriter.writerow =(["Average Change:" , "-2315.12"])
+    #csvwriter.writerow =(['Greatest Increase in Profits', 'Feb-2012 ($1926159)'])
+    #csvwriter.writerow =(['Greatest Decrease in Losses:', 'Sep-2013 ($-2196167)']) 
 
-    #writer.writerows(cleaned_csv)   
+    #csvwriter.writerows(cleaned_csv)   
