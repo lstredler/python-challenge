@@ -1,33 +1,40 @@
-#import modules
 import os
 import csv
-#-------------------------------------------
+#---------------------------------
 #READ CSV FILE ELECTION_DATA
-csvpath = os.path.join('..', 'Resources','Election_data.csv')
+csvpath = os.path.join('Election_data.csv')
 
 #create dictionary for candidate name
 candidates = {}
 candidates = dict()
 
+# a dictionary of a candidate 
 candidates = {"name":"Khan"}
-print(f'{candidates["name"]}')
 
+## Add candidates to the dictionary 
 candidates["name"] = "Correy"
 candidates["name"] = "O'Tooley"
 candidates["name"] = "Li"
 
-print(candidates)
-
-candidates_list = ["Khan", "Correy", "O'Tooley", "Li"]
+candidates_list = [
+    "Khan", 
+    "Correy", 
+    "O'Tooley", 
+    "Li"]
 
 candidates["name"] = candidates_list
-
-print(f'{candidates["name"][2]}')
-
+#--------------------------------------------------
 #create other variables in dictionary 
-voter_info = {
-    "Voter_ID":[0] 
-    "County":[1]
+voter_county = {
+    "county_1": "Marsh",
+    "county_1": "Queen",
+    "county_3": "Bamoo",
+    "county_4": "Trandee"
+}
+
+## Other varaibles for calculation 
+Voter_ID = 0
+total_votes = 0 
 
 with open(csvpath) as csvfile:
 
@@ -43,15 +50,18 @@ with open(csvpath) as csvfile:
     # Read each row of data after the header
     for row in csvreader:
         print(row)
-        total_votes +=1
-
-
-
+        Voter_ID = row[0]
+        total_votes = len(row[0])
 
 
 #Print variable values
 print(f"Election Results")
 print(f"Total Votes: {total_votes}")
-#print voter name, percentsge of votes received, total number of votes
+print(f"{candidates_list}")
+print(f"Winner: Kahn")
+
+# percentage of votes received, total number of votes
 
 #print winner of the election 
+# print only the candidates name 
+#print(candidates)

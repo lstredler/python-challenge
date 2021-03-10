@@ -47,13 +47,18 @@ print(f"Average Change: {average_change}")
 print (f"Greatest Increase in Profits: {arr}")
 print(f"Greatest Decrease in Losses: {arr}")
 
-# export data to text file int analysis folder - specify file to write  
-output_path = os.path.join("..", "output", "Analysis")
+#Zip files together 
+#cleaned_csv = zip(date,profits_losses,net_total, total_months, total_volume,max_min)
 
-#with open(output_path, 'w') as outfile:  
-    #csvwriter = csv.writer(csvfile, delimiter=',')
-    #csvwriter.writerow(['Total Months:', '86'])
-    #csvwriter.writerow(['Net Total:' , '$38,382,578'])
-    #csvwriter.writerow(['Average Change:' , '-2315.12'])
-    #csvwriter.writerow(['Greatest Increase in Profits', 'Feb-2012 ($1926159)'])
-    #csvwriter.writerow(['Greatest Decrease in Losses:', 'Sep-2013 ($-2196167)'])    
+# export data to text file int analysis folder - specify file to write  
+#output_file = os.path.join("..", "Resources","budget_analysis.csv")
+
+#open the output file 
+#with open(output_file, "w") as datafile:  
+    #writer.writerow =(["Total Months:", "86"])
+    #writer.writerow =(["Net Total:" , "$38,382,578"])
+    #writer.writerow =(["Average Change:" , "-2315.12"])
+    #writer.writerow =(['Greatest Increase in Profits', 'Feb-2012 ($1926159)'])
+    #writer.writerow =(['Greatest Decrease in Losses:', 'Sep-2013 ($-2196167)']) 
+
+    #writer.writerows(cleaned_csv)   
