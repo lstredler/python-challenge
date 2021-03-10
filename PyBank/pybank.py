@@ -47,11 +47,9 @@ print(f"Average Change: {average_change}")
 print (f"Greatest Increase in Profits: {arr}")
 print(f"Greatest Decrease in Losses: {arr}")
 
-#Zip files together 
-#cleaned_csv = zip(date,profits_losses,net_total, total_months, total_volume,max_min)
 
-# export data to text file int analysis folder - specify file to write  
-#output_file = os.path.join("..", "Resources","budget_analysis.csv")
+#export data to text file int analysis folder - specify file to write  
+output_file = os.path.join("..", "Resources","budget_analysis.csv")
 
 #open the output file 
 #with open(output_file, "w") as datafile:  
